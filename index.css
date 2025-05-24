@@ -30,16 +30,23 @@ header {
 
 /* LOGO */
 .logo img {
-  height: 120px;
+  display: flex; /* Coloca logo e texto na mesma linha */
+  align-items: center; /* Alinha verticalmente */
+  gap: 5px; /* Espaço entre logo e texto */
+
 }
+
 
 
 
 nav {
   display: flex;
   gap: 20px;
+  font-size: 20px;
 }
-
+nav a:hover {
+  background-color: #575757; /* Cor de fundo ao passar o mouse */
+}
 
 /* VISÍVEL SÓ MOBILE */
 .menu-toggle {
