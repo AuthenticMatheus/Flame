@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  
+}
+
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 30px 0px; /* antes era 30px 80px */
+}
+
+/* LOGO */
+.logo img {
+  display: block;
+  margin-left: 0; /* força a grudar na esquerda */
+  max-width: 200px; /* ou o tamanho que quiser */
+}
+
+
+
+
+nav {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+nav a:hover {
+  background-color: #575757; /* Cor de fundo ao passar o mouse */
+}
+
+/* VISÍVEL SÓ MOBILE */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  padding: 15px;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  color: white;
+  position:absolute;
+}
+
+/* NAV (VAI VIRAR RISCOS NO MOBILE) */
+.side-menu {
+  display: block;
+  gap: 20px;
+  justify-content: center;
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.side-menu ul li {
+  padding: 10px 20px;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+section {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+section p, section ul {
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+input, textarea {
+  padding: 20px;
+  border: none;
+  background: #111;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #777;
+}
+
+button {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/*PARTE DO TEXTO DE APRESENTAÇÃO*/
+.home {
+  display: flex; /* Coloca lado a lado */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Centraliza no container */
+  padding: 0px;
+  flex-wrap: wrap; /* Deixa quebrar em telas pequenas */
+ }  
+
+
+    .texto img {
+      float: right;
+      width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+}
+
+.texto h2,p{
+  align-items: center;
+  display: flex;
+} .texto h2 {
+  font-size: 50px;
+} .texto p{
+  font-size: 20px;
+}
+
+
+/*SOBRE*/
+
+
+/*PROJETOS*/
+
+.projetos {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+} .projetos img{
+  width: 150px;
+  height: 150px;
+}
+
+/*HABILIDADES*/
+.habilidades img{
+  height: 90px;
+  width: 100px;
+  margin: 10px;
+} .habilidades {
+  text-align: center;
+} .habilidades ul img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+footer {
+  padding-top: 20px;
+  font-size: 1rem;
+  color: #aaa;
+  margin-left: 450px;
+}
+
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+ 
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+
+    .side-menu {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      width: 240px;
+      height: 100%;
+      background-color: black;
+      flex-direction: column;
+      padding: 20px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+  
+    .main-menu.active {
+      left: 0;
+    }
+  
+    .side-menu ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+
+.logo img {
+  display: block;
+  margin: 10px auto;
+  max-width: 200px;
+  margin-left: 50px;
+
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+
+.texto h2 {
+  font-size: 20px;
+  margin: 10px;
+}
+.texto p{
+  font-size: 10px;
+  margin: 10px;
+}
+.texto img {
+  float: unset; 
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-left: 90px;
+      margin-top: 0;
+      
+      
+}
+
+footer {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1rem;
+  color: #aaa;
+  margin: auto;
+}
+
+
+
+
+}
+
+
+
