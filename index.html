@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus | Dev de Sites</title>
+  <link rel="stylesheet" href="index.css" >
+  <script src="./JS/script.js" defer></script>
+  
+  
+  <style>
+    .Whats { position: fixed; bottom: 10px; right: 10px; z-index: 9999; }
+  </style>
+
+
+</head>
+<body>
+  <Div class="container">
+  <header>
+    
+    <div class="logo">
+      <img src="./Imgs/Flame logo.jpg" alt="Logo">
+    </div>
+  
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+
+<nav class="side-menu" id="sideMenu">
+  <ul>
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="#">Projetos</a></li>
+    <li><a href="#">Contato</a></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    if (menu.style.left === "0px") {
+      menu.style.left = "-250px";
+    } else {
+      menu.style.left = "0px";
+    }
+  }
+</script>
+  </header>
+
+
+  <section class = "home" >
+    <div class="texto">
+
+ <img src="./Imgs/perfil.png" alt="">
+ 
+    <h2>Olá! Eu sou o Matheus, Desenvolvedor Web pronto para te ajudar! </h2>
+    <p> Esse aqui é o meu site pessoal, com o tempo vou melhorando ele,<br> mas precisando de uma ajudinha para desenvolver aquele seu site
+      é só chamar! 
+    </p>
+       
+  </div>
+</section>
+
+  <section id="sobre" class="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Trabalho com HTML, CSS, JS e mais. Crio sites rápidos, bonitos e funcionais, com foco no que importa.</p>
+  </section>
+
+  <section id="projetos" class="projetos">
+    <h2>Projetos</h2>
+    <ul>
+      <img src="./Imgs/code2.jpg" alt="">
+      <li><a href="#">Projeto 1</a></li>
+      <img src="" alt="">
+      <li><a href="#">Projeto 2</a></li>
+      <img src="" alt="">
+      <li><a href="#">Projeto 3</a></li>
+    </ul>
+  </section>
+
+  <section id="habilidades" class="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <a href=""> <img src="./Imgs/html-5.png" alt="HTML"></a>
+      <a href=""><img src="./Imgs/css-3.png" alt=""></a>
+      <a href=""><img src="./Imgs/js.png" alt=""></a>
+      <a href=""><img src="./Imgs/wordpress.png" alt=""></a>
+    </ul>
+  </section>
+
+  <section id="contato" class="contato">
+      <h2>Entre em contato</h2>
+      <form action="#" method="POST">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+  </section>
+
+
+
+  <div class="Whats">
+    <a href="https://wa.me/5519978193361?text=Ol%C3%A1%2C%20vim%20pelo%20site%21" target="_blank">
+    <img src="https://static.vecteezy.com/system/resources/previews/016/716/468/original/whatsapp-icon-free-png.png" width="60" alt="Fale conosco pelo Whatsapp" title="Fale conosco pelo Whatsapp"> 
+ </a> 
+</div>
+    
+
+
+
+  <footer>
+    <p>&copy; 2025 Matheus. Todos os direitos reservados.</p>
+  </footer>
+  <script src="./JS/botao.js"></script>
+</div>
+</body>
+</html>
