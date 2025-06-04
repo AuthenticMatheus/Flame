@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+#particles-js {
+  height: 100%;
+  background-color: orange;
+}
+
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -87,6 +94,9 @@ nav a:hover {
   display: block;
 }
 
+.side-menu ul li img {
+display:none;
+}
 
 .nav-links a {
   color: white;
@@ -201,14 +211,21 @@ button:hover {
 
 /*PROJETOS*/
 
-.projetos {
+.projetos ul {
   display: flex;
   gap: 20px;
   font-size: 20px;
 } .projetos img{
   width: 150px;
   height: 150px;
+  display: flex;
 }
+.projetos li p{
+  position: relative;
+  margin: 6px;
+
+}
+
 
 /*HABILIDADES*/
 .habilidades img{
@@ -262,19 +279,33 @@ footer {
       height: 100%;
       background-color: black;
       flex-direction: column;
-      padding: 20px;
+      padding: 10px;
+      margin-top: 50px;
       transition: left 0.3s ease;
       z-index: 1000;
     }
-  
+  .side-menu li img{
+    width: 25px; 
+     margin-right: 20px;
+     
+  }
+  .side-menu ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+  .side-menu ul li {
+      display: flex;
+      align-items: center; /* alinha verticalmente ícone e texto */
+      gap: 8px; /* espaço entre o ícone e o texto */
+    }
+  .side-menu ul li img{
+    display: flex;
+  }
+
     .main-menu.active {
       left: 0;
     }
   
-    .side-menu ul {
-      flex-direction: column;
-      gap: 15px;
-    }
     
 
 .logo img {
@@ -310,6 +341,20 @@ footer {
       
       
 }
+
+.projetos ul img{
+  height: 90px;
+  width: 90px;
+  margin: 0px;
+}
+
+
+
+
+
+
+
+
 
 footer {
   text-align: center;
