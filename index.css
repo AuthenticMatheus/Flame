@@ -244,7 +244,7 @@ button:hover {
   z-index: 9999;
 } .habilidades {
   text-align: center;
-  background-color: white;
+ 
   
 } .habilidades ul img:hover {
   transform: scale(1.2);
