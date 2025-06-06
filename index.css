@@ -2,11 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  z-index: 2;
 }
 
+
+
 #particles-js {
+  position: fixed;
+  width: 100%;
   height: 100%;
-  background-color: orange;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 
@@ -18,7 +26,7 @@ html, body {
   width: 100vw;
   background-color: black;
   color: white;
-  
+  z-index: 2;
 }
 
 
@@ -27,7 +35,7 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  
+  z-index: 2;
 }
 
 header {
@@ -36,6 +44,7 @@ header {
   justify-content: space-between;
   background-color: #000;
   padding: 30px 0px; /* antes era 30px 80px */
+  z-index: 2;
 }
 
 /* LOGO */
@@ -228,16 +237,18 @@ button:hover {
 
 
 /*HABILIDADES*/
-.habilidades img{
+.habilidades ul img{
   height: 90px;
   width: 100px;
   margin: 10px;
+  z-index: 9999;
 } .habilidades {
   text-align: center;
+  background-color: white;
+  
 } .habilidades ul img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
-
 
 
 
@@ -268,6 +279,7 @@ footer {
   
     .menu-toggle {
       display: block;
+
     }
   
 
@@ -275,14 +287,15 @@ footer {
       position: fixed;
       left: -250px;
       top: 0;
-      width: 240px;
-      height: 100%;
+      width: 250px;
+      height: 120%;
       background-color: black;
       flex-direction: column;
       padding: 10px;
-      margin-top: 50px;
+      margin-top: 0px;
       transition: left 0.3s ease;
-      z-index: 1000;
+      z-index: 2;
+      
     }
   .side-menu li img{
     width: 25px; 
@@ -292,6 +305,8 @@ footer {
   .side-menu ul {
       flex-direction: column;
       gap: 15px;
+      margin-top: 60px;
+      margin-left: -12px;
     }
   .side-menu ul li {
       display: flex;
@@ -336,7 +351,7 @@ footer {
       height: 150px;
       object-fit: cover;
       border-radius: 50%;
-      margin-left: 90px;
+      margin-left: 75px;
       margin-top: 0;
       
       
@@ -348,8 +363,11 @@ footer {
   margin: 0px;
 }
 
-
-
+.projetos li p {
+  z-index: 1;
+  text-align: left;
+  margin-left: 0px;
+}
 
 
 
