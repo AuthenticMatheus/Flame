@@ -72,16 +72,26 @@
 </nav>
 
 <script>
-  function toggleMenu() {
-    const menu = document.getElementById("sideMenu");
+  const menu = document.getElementById("sideMenu");
+  const toggle = document.querySelector(".menu-toggle");
+
+  // Abre/fecha ao clicar no ícone
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation(); // Impede que o clique feche o menu imediatamente
     if (menu.style.left === "0px") {
       menu.style.left = "-250px";
     } else {
       menu.style.left = "0px";
     }
-  }
-</script>
+  });
 
+  // Fecha ao clicar fora do menu e do ícone
+  document.addEventListener("click", function (e) {
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+      menu.style.left = "-250px";
+    }
+  });
+</script>
 
   </header>
 
@@ -136,11 +146,13 @@
 
   <section id="contato" class="contato">
       <h2>Entre em contato</h2>
-      <form action="#" method="POST">
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Seu e-mail" required>
-        <textarea placeholder="Sua mensagem" required></textarea>
+      <form action="https://formsubmit.co/matheusdev.script@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="message" placeholder="Sua mensagem" required></textarea>
         <button type="submit">Enviar</button>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
       </form>
   </section>
 

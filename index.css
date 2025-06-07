@@ -277,7 +277,8 @@ footer {
 
   
     .menu-toggle {
-      display: block;
+      display: flex;
+      position: fixed;
 
     }
   
@@ -293,7 +294,7 @@ footer {
       padding: 10px;
       margin-top: 0px;
       transition: left 0.3s ease;
-      z-index: 2;
+      z-index: 5;
       
     }
   .side-menu li img{
