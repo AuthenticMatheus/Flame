@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  z-index: 2;
 }
 
 
@@ -23,10 +22,64 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  width: 100vw;
+  width: 100%;
   background-color: black;
   color: white;
-  z-index: 2;
+  
+  
+  
+}
+
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #fff;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.5s ease-in-out infinite;
+  margin-bottom: 10px;
+}
+
+.loading-text {
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #aaa;
+  animation: pulse 0.1s ease-in-out infinite;
+}
+
+/* Animações */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 
@@ -35,7 +88,7 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  z-index: 2;
+  z-index: 10;
 }
 
 header {
@@ -108,14 +161,16 @@ display:none;
 }
 
 .nav-links a {
-  color: white;
+  color:#aaa;
   text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
+  border-radius: 50%;
 }
 
-.nav-links a:hover {
+a:hover {
   color: #ccc;
+  transition: 0.3s;
+  transform: scale(1.2);
+
 }
 
 section {
@@ -151,7 +206,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  
+  z-index: 9999;
 }
 
 input, textarea {
@@ -170,20 +225,35 @@ input:focus, textarea:focus {
 }
 
 button {
-  background: #fff;
+  background: white;
   color: #000;
   font-weight: bold;
-  padding: 12px;
   border: none;
   cursor: pointer;
   border-radius: 4px;
   transition: 0.3s;
+  width: 100%;
+  height: 60px;
+  font-size: 35px;
+  text-align: center;
+}
+
+button a{
+  color: #000;
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
 }
 
 button:hover {
   background: #000;
   color: #fff;
   border: 1px solid #fff;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px;
 }
 
 /*PARTE DO TEXTO DE APRESENTAÇÃO*/
@@ -232,7 +302,10 @@ button:hover {
 .projetos li p{
   position: relative;
   margin: 6px;
-
+}
+.projetos img:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 
@@ -244,12 +317,22 @@ button:hover {
   z-index: 9999;
 } .habilidades {
   text-align: center;
+  margin: 1px;
   
 } .habilidades ul img:hover {
   transform: scale(1.2);
+  transition: 0.3s;
 }
 
-
+.indicador img {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  align-items: center;
+  margin-left: 480px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 
 
 footer {
@@ -370,7 +453,15 @@ footer {
 }
 
 
-
+.indicador img {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+}
 
 
 

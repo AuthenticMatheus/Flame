@@ -30,12 +30,44 @@
   
   <style>
     .Whats { position: fixed; bottom: 10px; right: 10px; z-index: 9999; }
+    .Whats:hover {transform: scale(1.2); transition: 0.3s; }
   </style>
 
 
 </head>
 <body>
 
+  
+  <!-- PRELOADER -->
+<div id="preloader">
+  <div class="spinner"></div>
+  <span class="loading-text">Carregando...</span>
+</div>
+
+<!-- CONTEÚDO DO SITE -->
+<div id="conteudo" style="display: none;">
+  <!-- Todo seu site aqui -->
+</div>
+
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    const conteudo = document.getElementById("conteudo");
+    let opacity = 1;
+
+    const fade = setInterval(() => {
+      if (opacity > 0) {
+        opacity -= 0.1;
+        preloader.style.opacity = opacity;
+      } else {
+        clearInterval(fade);
+        preloader.style.display = "none";
+        conteudo.style.display = "block";
+        document.body.classList.remove("preload");
+      }
+    }, 100); // tempo menor = fade mais suave
+  });
+</script>
 
  <div id="particles-js"></div>
  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -137,26 +169,19 @@
   <section id="habilidades" class="habilidades">
     <h2>Habilidades</h2>
     <ul>
-      <a href=""> <img src="./Imgs/html-5.png" alt="HTML"></a>
-      <a href=""><img src="./Imgs/css-3.png" alt=""></a>
-      <a href=""><img src="./Imgs/js.png" alt=""></a>
-      <a href=""><img src="./Imgs/wordpress.png" alt=""></a>
+      <img src="./Imgs/html-5.png" alt="HTML">
+      <img src="./Imgs/css-3.png" alt="CSS">
+      <img src="./Imgs/js.png" alt="JavaScript">
+      <img src="./Imgs/wordpress.png" alt="Wordpress">
     </ul>
   </section>
 
-  <section id="contato" class="contato">
-      <h2>Entre em contato</h2>
-      <form action="https://formsubmit.co/devmatheus.script@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <textarea name="message" placeholder="Sua mensagem" required></textarea>
-        <button type="submit">Enviar</button>
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-      </form>
-  </section>
+  <div class="indicador">
+<img src="./Imgs/indicador.png" alt=""> </div>
 
+  <button> <img src="/Imgs/linkimage.png" height ="35" width="35"> <a href="https://linktr.ee/DevMath3us">FALE COMIGO </a></button>
 
+ 
 
   <div class="Whats">
     <a href="https://wa.me/5519978193361?text=Ol%C3%A1%2C%20vim%20pelo%20site%21" target="_blank">
